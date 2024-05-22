@@ -19,7 +19,7 @@ pipeline {
         stage('Start the server') {
             steps {
                 // in windows bat and linux is sh
-                bat 'pm2 start server.js'
+                bat 'npm start'
             }
         }
         
