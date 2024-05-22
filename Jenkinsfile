@@ -12,7 +12,10 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // in windows bat and linux is sh
-                bat 'npm install && npm install -g nodemon'
+                bat '''
+                    npm install
+                    npm install -g nodemon
+                '''
             }
         }
 
