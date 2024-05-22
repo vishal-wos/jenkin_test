@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-  tools {
-        nodejs 'NodeJS' // This should match the name given in the Global Tool Configuration
-    }
+//   tools {
+//         nodejs 'NodeJS' // This should match the name given in the Global Tool Configuration
+//     }
 
     stages {
         stage('Checkout') {
@@ -25,7 +25,7 @@ pipeline {
         stage('Start the server') {
             steps {
                 // in windows bat and linux is sh
-                bat 'npm start'
+                 'npm start'
             }
         }
         
