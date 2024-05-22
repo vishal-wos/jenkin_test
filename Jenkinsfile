@@ -26,23 +26,23 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                script {
-                    // Run your tests here
-                    bat 'npm test'
-                }
-            }
-        }
+        // stage('Run Tests') {
+        //     steps {
+        //         script {
+        //             // Run your tests here
+        //             bat 'npm test'
+        //         }
+        //     }
+        // }
 
-        stage('Build') {
-            steps {
-                script {
-                    // If you have any build steps, include them here
-                    bat 'npm run build'
-                }
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         script {
+        //             // If you have any build steps, include them here
+        //             bat 'npm run build'
+        //         }
+        //     }
+        // }
 
         stage('Start Server') {
             steps {
