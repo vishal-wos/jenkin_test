@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+  tools {
+        nodejs 'NodeJS' // This should match the name given in the Global Tool Configuration
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -12,9 +16,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // in windows bat and linux is sh
-                bat '''
+                '''
                     npm install
-                    npm install -g nodemon
                 '''
             }
         }
