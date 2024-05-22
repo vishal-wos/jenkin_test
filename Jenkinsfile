@@ -16,12 +16,6 @@ pipeline {
             }
         }
 
-        stage('PM2 install in goble'){
-            steps:{
-                bat 'npm install -g pm2'
-            }
-        }
-
         stage('Start the server') {
             steps {
                 // in windows bat and linux is sh
